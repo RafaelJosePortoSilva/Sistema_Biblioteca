@@ -1,3 +1,6 @@
+import Obj.Database;
+import Obj.Livro;
+
 import javax.swing.*;
 
 public class Index extends JFrame {
@@ -18,6 +21,10 @@ public class Index extends JFrame {
 
 
     public static void main(String[] args) {
+
+        Database database = new Database("Books.csv");
+        Livro[] df = database.load_data();
+
 
         new Index();
 
