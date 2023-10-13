@@ -17,7 +17,7 @@ public class Database {
     public Livro[] load_data(){
 
         String linha = "";
-        String[] colunas;
+        String[] colunas = {};
 
         try (BufferedReader leitor = new BufferedReader(new FileReader(diretorio))){
             while ((linha = leitor.readLine()) != null){
