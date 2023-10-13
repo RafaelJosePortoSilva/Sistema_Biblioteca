@@ -2,13 +2,32 @@ package Obj;
 
 public class Livro {
 
-    private codigo;
-    private titulo;
-    private autor;
-    private ano_publicacao;
+    private int codigo;
+    private String titulo;
+    private String autor;
+    private int ano_publicacao;
 
-    /*
-    ISBN,Book-Title,Book-Author,Year-Of-Publication,Publisher,Image-URL-S,Image-URL-M,Image-URL-L
-    */
+
+    public Livro(int codigo, String titulo) {
+        this.codigo = codigo;
+        this.titulo = titulo;
+    }
+
+    public void setAutor(String autor){
+        this.autor = autor;
+    }
+    public String getAutor(){
+        return autor;
+    }
+
+    public void setAnoPublicacao(int ano){
+        this.ano_publicacao = ano;
+    }
+    public int getAnoPublicacao(){
+        return ano_publicacao;
+    }
+
+    // METODOS
+
 
 }
