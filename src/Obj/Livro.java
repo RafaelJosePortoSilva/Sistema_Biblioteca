@@ -6,6 +6,7 @@ public class Livro {
     private String titulo;
     private String autor;
     private int ano_publicacao;
+    private String url_foto;
 
 
     public Livro(int codigo, String titulo) {
@@ -27,7 +28,11 @@ public class Livro {
         return ano_publicacao;
     }
 
-    // METODOS
+    public String getUrl_foto() {
+        return url_foto;
+    }
 
-
+    public void setUrl_foto(String url_foto) {
+        this.url_foto = url_foto;
+    }
 }
