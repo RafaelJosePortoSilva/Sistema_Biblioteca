@@ -2,14 +2,14 @@ package Obj;
 
 public class Livro {
 
-    private int codigo;
+    private String codigo;
     private String titulo;
     private String autor;
     private int ano_publicacao;
     private String url_foto;
 
 
-    public Livro(int codigo, String titulo) {
+    public Livro(String codigo, String titulo) {
         this.codigo = codigo;
         this.titulo = titulo;
     }
