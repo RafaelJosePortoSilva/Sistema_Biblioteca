@@ -31,8 +31,11 @@ public class Livro {
     public String getUrl_foto() {
         return url_foto;
     }
-
     public void setUrl_foto(String url_foto) {
         this.url_foto = url_foto;
     }
+
+    public String getCodigo() {return codigo;}
+    public String getTitulo() {return titulo;}
+
 }

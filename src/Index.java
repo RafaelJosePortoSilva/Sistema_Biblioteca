@@ -4,6 +4,7 @@ import Obj.Livro;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
 
 public class Index extends JFrame {
 
@@ -41,26 +42,44 @@ public class Index extends JFrame {
         index.btn_pesquisar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                pesquisar_livros(index.txt_pesquisar,index.list_pesquisar,df);
+                pesquisar_livros(index.txt_pesquisar,index.list_pesquisar,df,index.cb_pesquisar);
             } // end actionPerformed
         }); // end addActionListener
 
         // ComboBox pesquisa
-        for (String tipo : new String[] {"Nome","Autor","Código"}){
+        for (String tipo : new String[] {"Título","Autor","Código"}){
             index.cb_pesquisar.addItem(tipo);
         }
     }
 
 
 
-    public static void pesquisar_livros(JTextField txt, JList list,Livro[] df){
+    public static void pesquisar_livros(JTextField txt, JList list,Livro[] df,JComboBox cb){
 
-        String txtPesquisa;
+        String txtPesquisa, tipo,item = null;
 
+        tipo = cb.getSelectedItem().toString();
+        System.out.println(tipo);
         txtPesquisa = txt.getText();
         if (txtPesquisa.isEmpty()){return;}
 
         for (Livro livro : df){
+            switch (tipo) {
+                case "Título":
+                    item = livro.getCodigo();
+                    break;
+                case "Autor":
+                    item = livro.getAutor();
+                    break;
+                case "Código":
+                    item = livro.getCodigo();
+                    break;
+            }
+
+        if (txtPesquisa.indexOf(item)>0){
+            System.out.println(item);
+
+        }
 
 
         }
