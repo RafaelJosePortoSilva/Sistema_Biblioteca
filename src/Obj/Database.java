@@ -43,12 +43,12 @@ public class Database {
             while ((linha = leitor.readLine()) != null){
 
                 colunas = linha.split(",");
-                System.out.println(colunas.length);
+                //System.out.println(colunas.length);
 
                 if (colunas.length > 8) {continue;}
 
                 // acessar dados da linha
-                System.out.println(colunas);
+                //System.out.println(colunas);
 
                 if (cabecalho == true){
                     cabecalho = false;
