@@ -7,6 +7,9 @@ public class Index extends JFrame {
 
     private JLabel lbl_Title;
     private JPanel Index_Panel;
+    private JTextField txt_pesquisar;
+    private JButton btn_pesquisar;
+    private JList list1;
     private JLabel lbl_livrosCarregados;
 
     public Index(){
