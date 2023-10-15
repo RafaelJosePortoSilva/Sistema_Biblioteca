@@ -13,6 +13,7 @@ public class Index extends JFrame {
     private JButton btn_pesquisar;
     private JList list_pesquisar;
     private JLabel lbl_livrosCarregados;
+    private JComboBox cb_pesquisar;
 
     public Index(){
 
@@ -37,21 +38,33 @@ public class Index extends JFrame {
 
         index.lbl_livrosCarregados.setText("Livros carregados: \n" + df.length);
 
-
         index.btn_pesquisar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                pesquisar_livros(index.txt_pesquisar,index.list_pesquisar);
+                pesquisar_livros(index.txt_pesquisar,index.list_pesquisar,df);
             } // end actionPerformed
         }); // end addActionListener
+
+        // ComboBox pesquisa
+        for (String tipo : new String[] {"Nome","Autor","Código"}){
+            index.cb_pesquisar.addItem(tipo);
+        }
     }
 
-    public static void pesquisar_livros(JTextField txt, JList list){
+
+
+    public static void pesquisar_livros(JTextField txt, JList list,Livro[] df){
 
         String txtPesquisa;
 
         txtPesquisa = txt.getText();
         if (txtPesquisa.isEmpty()){return;}
+
+        for (Livro livro : df){
+
+
+        }
+
 
     }
 
