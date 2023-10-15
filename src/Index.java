@@ -7,6 +7,7 @@ public class Index extends JFrame {
 
     private JLabel lbl_Title;
     private JPanel Index_Panel;
+    private JLabel lbl_livrosCarregados;
 
     public Index(){
 
@@ -26,7 +27,10 @@ public class Index extends JFrame {
         Livro[] df = database.load_data();
 
 
-        new Index();
+        Index index = new Index();
+
+        index.lbl_livrosCarregados.setText("Livros carregados: \n" + df.length);
+
 
 
     }
